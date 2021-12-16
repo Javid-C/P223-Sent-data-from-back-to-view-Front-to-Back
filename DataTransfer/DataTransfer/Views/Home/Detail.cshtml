@@ -1,0 +1,32 @@
+﻿@using DataTransfer.Models
+@using DataTransfer.ViewModels
+@model ProductCardVM
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>Detail Nike</h1>
+
+
+<p>@Model.Product.Id</p>
+<p>@Model.Product.Name</p>
+<p>@Model.Product.Price</p>
+<p>@Model.Product.Size</p>
+<p>@Model.Product.Color</p>
+<p>@Model.Product.Count</p>
+
+
+<h4>Payment section</h4>
+
+<ul>
+    @foreach (Card card in Model.Cards)
+	{
+		 <li>
+			 @card.Id, @card.Name, @card.ExpiredDate, @card.CVC
+		 </li>
+	}
+</ul>
+
+
+

@@ -1,0 +1,18 @@
+﻿@using DataTransfer.Models
+@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+    //Layout = null;
+    //List<Product> products = ViewBag.Products;
+
+}
+
+<h1>New Nike Models</h1>
+
+<ul>
+    @foreach (Product item in Model)
+    {
+        <li style="color:@(item.Count<=0?"red":"")">@item.Id, name= @item.Name, price= @item.Price $,size= @item.Size,color= @item.Color,count= @item.Count</li>
+    }
+</ul>
+
